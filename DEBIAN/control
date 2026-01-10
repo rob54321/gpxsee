@@ -1,29 +1,13 @@
 Package: gpxsee
 Source: gpxsee
-Version: 1.0.3
+Version: 1.0.4
 Architecture: all
 Maintainer: Robert Key robertkey021@gmail.com
 Section: utils
-Build-Depends: debhelper-compat (=13),
-		  qtbase5-private-dev,
-		  qtbase5-dev,
-		  qttools5-dev-tools, 
-		  qt5-qmake,
-          libqt5svg5-dev, 
-          libqt5opengl5-dev, 
-          zlib1g-dev, 
-          libpng-dev, 
-          libjpeg-dev, 
-          libproj-dev,
-          libexif-dev, 
-          libtiff-dev, 
-          libgeos-dev, 
-          libqt5serialport5-dev
 Priority: optional
 Homepage: https://www.gpxsee.org/
 Depends:  build-essential,
 		 cmake,
-		 qt5-qmake,
 		 pkg-config,
 		 libqt5core5a, 
 		 libqt5gui5, 
@@ -33,5 +17,20 @@ Depends:  build-essential,
 		 libqt5serialport5, 
 		 zlib1g, 
 		 libpng16-16, 
-		 libjpeg62-turbo
+		 libjpeg62-turbo,
+		  qtbase5-private-dev,
+		  qtbase5-dev,
+		  qttools5-dev-tools, 
+		  qt5-qmake,
+	          libqt5svg5-dev, 
+		  libqt5opengl5-dev, 
+	          zlib1g-dev, 
+		  libpng-dev, 
+	          libjpeg-dev, 
+	          libproj-dev,
+	          libexif-dev, 
+	          libtiff-dev, 
+	          libgeos-dev, 
+	          libqt5serialport5-dev
+
 Description: This gpxsee source is cloned from github, build and installed.
