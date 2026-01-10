@@ -35,5 +35,4 @@ Depends:  build-essential,
 		 libpng16-16, 
 		 libjpeg62-turbo, 
 		 libproj22
-
 Description: This gpxsee source is cloned from github, build and installed.
