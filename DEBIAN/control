@@ -1,7 +1,7 @@
 Package: gpxsee
 Source: gpxsee
-Version: 1.0.8
-Architecture: all
+Version: 1.0.9
+Architecture: arm64
 Maintainer: Robert Key robertkey021@gmail.com
 Section: utils
 Priority: optional
