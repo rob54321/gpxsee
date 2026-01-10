@@ -3,7 +3,7 @@ Source: gpxsee
 Version: 1.0.9
 Architecture: arm64
 Maintainer: Robert Key robertkey021@gmail.com
-Section: utils
+Section: myown
 Priority: optional
 Homepage: https://www.gpxsee.org/
 Depends:  build-essential,
