@@ -1,0 +1,24 @@
+Package: gpxsee
+Version: 1.0.0
+Architecture: arm64
+Maintainer: Robert Key robertkey021@gmail.com
+Section: myown
+Build-Depends: build-essential,
+		 cmake,
+		  pkg-config,
+		  qtbase5-private-dev,
+		  qtbase5-dev,
+		  qttools5-dev-tools, 
+		  qt5-qmake,
+          libqt5svg5-dev, 
+          libqt5opengl5-dev, 
+          zlib1g-dev, 
+          libpng-dev, 
+          libjpeg-dev, 
+          libproj-dev,
+          libexif-dev, 
+          libtiff-dev, 
+          libgeos-dev, 
+          libqt5serialport5-dev
+Priority: optional
+Description: This gpxsee source is cloned from github, build and installed.

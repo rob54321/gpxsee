@@ -1,0 +1,49 @@
+#!/bin/bash
+#############################################################
+# gpxsee:postinst
+#############################################################
+
+#############################################################
+# function exitonerror
+# this function exists if $1, the return code is not equal to 0
+# an error message $2 is printed
+# parameters passed
+# $1 return code from previous command
+# $2 error message to print if exit occurs
+#############################################################
+exitonerror() {
+	# check $1 return code
+	if test $1 -ne 0; then
+		echo "Exiting....$2"
+		exit 1;
+	fi
+}
+
+SOURCEDIR="/home/robert/gpxsee-build"
+GPXSEEURL="https://github.com/tumic0/GPXSee.git"
+
+# clone the source from github
+# if working directory exists, delete it
+# otherwise make it
+if test -d "${SOURCEDIR}"; then
+	# remove it
+	rm -rf "${SOURCEDIR}"
+fi
+
+# make the directory for source
+sudo -u robert mkdir "${SOURCEDIR}"
+
+# clone the source code from github
+sudo -u robert git clone -v "${GPXSEEURL}" "${SOURCEDIR}"
+exitonerror $? "git: could not clone ${GPXSEEURL}"
+
+# config the source
+cd "${SOURCEDIR}"
+sudo -u robert qmake
+exitonerror $? "qmake: error initialising build"
+
+# make the build
+sudo -u robert make -j4
+
+# install the files
+# make install
