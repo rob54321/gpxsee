@@ -32,5 +32,4 @@ Depends:  build-essential,
 	          libtiff-dev, 
 	          libgeos-dev, 
 	          libqt5serialport5-dev
-
 Description: This gpxsee source is cloned from github, build and installed.
