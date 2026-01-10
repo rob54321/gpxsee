@@ -21,8 +21,7 @@ Build-Depends: debhelper-compat (=13),
           libqt5serialport5-dev
 Priority: optional
 Homepage: https://www.gpxsee.org/
-Depends: ${shlibs:Depends}, ${misc:Depends}, 
-		 build-essential,
+Depends:  build-essential,
 		 cmake,
 		 qt5-qmake,
 		 pkg-config
