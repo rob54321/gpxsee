@@ -43,7 +43,7 @@ sudo -u robert qmake
 exitonerror $? "qmake: error initialising build"
 
 # make the build
-sudo -u robert make -j4
+# sudo -u robert make -j4
 
 # install the files
 # make install
