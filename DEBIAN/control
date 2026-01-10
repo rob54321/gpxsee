@@ -33,6 +33,5 @@ Depends:  build-essential,
 		 libqt5serialport5, 
 		 zlib1g, 
 		 libpng16-16, 
-		 libjpeg62-turbo, 
-		 libproj22
+		 libjpeg62-turbo
 Description: This gpxsee source is cloned from github, build and installed.
