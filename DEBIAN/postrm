@@ -1,0 +1,39 @@
+#!/bin/bash
+####################################################
+# gpxsee:postrm
+####################################################
+# this script removes all files as long as the source
+# directory exists.
+#############################################################
+# function exitonerror
+# this function exists if $1, the return code is not equal to 0
+# an error message $2 is printed
+# parameters passed
+# $1 return code from previous command
+# $2 error message to print if exit occurs
+#############################################################
+exitonerror() {
+	# check $1 return code
+	if test $1 -ne 0; then
+		echo "Exiting....$2"
+		exit 1;
+	fi
+}
+
+SOURCEDIR="/home/robert/gpxsee-build"
+
+# check if directory exists
+if test -d "${SOURCEDIR}"; then
+	# uninstall
+	cd "${SOURCEDIR}"
+	make uninstall
+	exitonerror $? "make uninstall: failed"
+	# remove tree
+	cd "/root"
+	rm -rf "${SOURCEDIR}"
+	exitonerror $? "rm -rf ${SOURCEDIR}: failed"
+else
+	# soure dir does not exist
+	echo "Cannot remove files, ${SOURCEDIR} does not exist"
+fi
+exit 0;
