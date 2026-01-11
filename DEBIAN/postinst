@@ -44,14 +44,7 @@ exitonerror $? "qmake: error initialising build"
 
 # make the build
 # for raspberry pi
-ARCH=`arch`
-if test "${ARCH}" = "aarch64"; then
-	sudo -u robert make -j4
-	exitonerror $? "make -j4 failed"
-elif test "${ARCH}" = "x86_64"; then
-	sudo -u robert make -j24
-	exitonerror $? "make -j24 failed"
-fi
+sudo -u robert make -j4
 
 # install the files
 make install
